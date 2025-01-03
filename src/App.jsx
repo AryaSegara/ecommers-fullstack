@@ -1,9 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css'
+import { BrowserRouter, Route,  Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Header from './components/Header';
 function App() {
 
   return (
     <>
-      <h1 className='text-danger'>Ecommers Full Stack</h1>
+    <BrowserRouter>
+    <Header />
+    <Routes>
+      <Route path="/" exact={true} element={<Home />} />
+    </Routes>
+    </BrowserRouter>
     </>
   )
 }
